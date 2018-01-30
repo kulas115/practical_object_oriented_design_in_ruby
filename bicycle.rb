@@ -13,11 +13,13 @@ class Gear
 
   def gear_inches
     # tire goes around rim twice for diameter
-    ratio * diameter
+    ratio * wheel.diameter
   end
 
-  def diameter
-    rim + (tire * 2)
+  Wheel = Struct.new(:rim, :tire) do
+    def diameter
+      rim + (tire * 2)
+    end
   end
 end
 
