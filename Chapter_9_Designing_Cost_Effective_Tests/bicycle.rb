@@ -1,3 +1,6 @@
+require 'minitest/spec'
+require 'minitest/autorun'
+
 class Gear
   attr_reader :chainring, :cog, :wheel
   def initialize(args)
@@ -28,8 +31,6 @@ class Wheel
     rim + (tire * 2)
   end
 end
-
-Gear.new(52, 11, 26, 1.5).gear_inches
 
 class WheelTest < MiniTest::Unit::TestCase
 
